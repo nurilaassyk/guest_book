@@ -20,7 +20,7 @@ class Book(models.Model):
                             verbose_name='Text')
     created_at = models.DateTimeField(auto_now_add=True,
                                       verbose_name='Created date')
-    updated_ad = models.DateTimeField(auto_now_add=True,
+    updated_ad = models.DateTimeField(auto_now=True,
                                       verbose_name='Updated date')
     status = models.TextField(verbose_name='Status',
                               choices=StatusChoices.choices,
