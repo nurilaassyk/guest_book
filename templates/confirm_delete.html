@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block menu %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="contant p-3">
+            <h1 class="book-title d-flex justify-content-center p-3"> You definitely want to delete? </h1>
+            <div class="card p-3 border-secondary mb-3 ">
+                <div class="card-group">
+                    <div class="author-box ">
+                        <h5 class="author"> {{ book.author }}</h5>
+                    </div>
+                    <div class="email-box">
+                        <h5 class="author email">( {{ book.email }} ) </h5>
+                    </div>
+                </div>
+                <div class="card-group p-3">
+                    <p class="book-txt"> {{ book.text }}</p>
+                    <p>{{ book.created_at }}</p>
+                </div>
+            </div>
+            <form action="{% url 'confirm_delete' book.id %}" method="POST">
+                {% csrf_token %}
+                <div class="book-button d-flex justify-content-center">
+                    <input class="btn btn-danger book-button" type="submit" value="Delete">
+                    <a class="btn btn-success book-button" href=" {% url 'home_view' %}"> Cancel </a></div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

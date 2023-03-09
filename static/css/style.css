@@ -1,0 +1,38 @@
+*{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+
+.book-title{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.book-link{
+     font-size: 20px;
+    text-transform: uppercase;
+}
+
+.author{
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.email{
+    color: gray;
+}
+
+.book-icon{
+    padding-right: 20px;
+}
+
+.book-txt{
+   font-style: italic;
+}
+
+.book-button{
+    margin: 10px;
+}
+
+
+
